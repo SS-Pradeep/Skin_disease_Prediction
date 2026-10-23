@@ -5,8 +5,10 @@ Upload a lesion photo, enter the patient's details, and the fusion model predict
 moved the prediction.
 
 ## 1. Get the trained model
-Run `Skin_Disease_CK_FUSION.ipynb` in Colab. Then copy `fusion_model.keras` and `config.json`
-from `MyDrive/skin_fusion/` into `app/models/`.
+`app/models/` already holds the model trained with `Skin_Disease_Multimodal_Fusion.ipynb`:
+`fusion_model.keras`, `config.json` and `clinical_encoding.json`. Its test scores on unseen patients are 75.5% accuracy,
+macro-F1 0.66 and macro AUC 0.93. Models from `Skin_Disease_CK_FUSION.ipynb` work too; see `models/README.md`.
+The app detects which notebook a model came from and prepares the photo and patient details the same way as in training.
 
 ## 2. Run on your own computer (demo)
 ```bash

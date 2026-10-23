@@ -1,0 +1,86 @@
+{
+  "dataset": "PAD-UFES-20 (Kaggle mahdavi1202/skin-cancer)",
+  "class_names": [
+    "ACK",
+    "BCC",
+    "MEL",
+    "NEV",
+    "SCC",
+    "SEK"
+  ],
+  "class_full_names": {
+    "ACK": "Actinic Keratosis",
+    "BCC": "Basal Cell Carcinoma",
+    "MEL": "Melanoma",
+    "NEV": "Nevus",
+    "SCC": "Squamous Cell Carcinoma",
+    "SEK": "Seborrheic Keratosis"
+  },
+  "img_size": 224,
+  "image_preprocessing": "RGB, resized to img_size x img_size, raw 0-255 floats (scaling is inside the model)",
+  "text_columns": [
+    "age",
+    "itch",
+    "grew",
+    "hurt",
+    "changed",
+    "bleed",
+    "elevation",
+    "region"
+  ],
+  "symptom_values": [
+    "TRUE",
+    "FALSE",
+    "UNK"
+  ],
+  "clinical_features": [
+    "age__age",
+    "categorical__itch_FALSE",
+    "categorical__itch_TRUE",
+    "categorical__grew_FALSE",
+    "categorical__grew_TRUE",
+    "categorical__grew_UNK",
+    "categorical__hurt_FALSE",
+    "categorical__hurt_TRUE",
+    "categorical__changed_FALSE",
+    "categorical__changed_TRUE",
+    "categorical__changed_UNK",
+    "categorical__bleed_FALSE",
+    "categorical__bleed_TRUE",
+    "categorical__elevation_FALSE",
+    "categorical__elevation_TRUE",
+    "categorical__region_ABDOMEN",
+    "categorical__region_ARM",
+    "categorical__region_BACK",
+    "categorical__region_CHEST",
+    "categorical__region_EAR",
+    "categorical__region_FACE",
+    "categorical__region_FOOT",
+    "categorical__region_FOREARM",
+    "categorical__region_HAND",
+    "categorical__region_LIP",
+    "categorical__region_NECK",
+    "categorical__region_NOSE",
+    "categorical__region_SCALP",
+    "categorical__region_THIGH"
+  ],
+  "late_fusion_image_weight": 0.25,
+  "gradcam_layer": "out_relu",
+  "models": {
+    "image": "image_model.keras",
+    "text": "text_model.keras",
+    "fusion": "fusion_model.keras"
+  },
+  "preprocessor": "clinical_preprocessor.joblib",
+  "test_results": {
+    "D: Feature fusion": {
+      "Accuracy": 0.755,
+      "Balanced accuracy": 0.6583,
+      "Macro precision": 0.6587,
+      "Macro recall": 0.6583,
+      "Macro F1": 0.6558,
+      "Weighted F1": 0.7608,
+      "Macro AUC": 0.9265
+    }
+  }
+}

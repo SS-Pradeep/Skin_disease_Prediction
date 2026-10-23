@@ -1,9 +1,14 @@
 # Model files go here
 
-After running `Skin_Disease_CK_FUSION.ipynb` in Colab, download these two files from
-Google Drive `MyDrive/skin_fusion/` and put them in this folder:
+The app works with a model from either fusion notebook. Both files must come from the same training run.
 
-- `fusion_model.keras`: the trained fusion model (about 27 MB)
-- `config.json`: class names, colour-normalisation targets and feature order
+**From `Skin_Disease_Multimodal_Fusion.ipynb`** (Drive folder `MyDrive/skin_multimodal/`). This is the model in use now:
+- `fusion_model.keras`: the trained fusion model
+- `config.json`: class names, feature list, test results
+- `clinical_encoding.json`: how the patient details are encoded (age mean/scale + one-hot columns).
+  Make it from `clinical_preprocessor.joblib` with `python app/convert_preprocessor.py <folder>`, run in Colab
+  where the model was trained. The `.joblib` file itself only loads with Colab's scikit-learn version, so the
+  app does not use it.
 
-Both files must come from the same notebook run.
+**From `Skin_Disease_CK_FUSION.ipynb`** (Drive folder `MyDrive/skin_fusion/`):
+- `fusion_model.keras` and `config.json` (the colour-normalisation targets are inside `config.json`)

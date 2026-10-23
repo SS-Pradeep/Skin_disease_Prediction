@@ -37,7 +37,7 @@ st.caption("Photo + patient details → fusion model (MobileNetV2 image branch +
 
 # Imported after the title so the page shows something while TensorFlow loads (10-20 s on first start).
 with st.spinner("Starting TensorFlow ..."):
-    from skin_core import SYMPTOMS, UNKNOWN_ALLOWED, FusionPredictor, decode_image, overlay
+    from skin_core import SYMPTOMS, UNKNOWN_ALLOWED, FusionPredictor, overlay
 
 
 @st.cache_resource(show_spinner="Loading the fusion model ...")
@@ -106,12 +106,11 @@ input_key = (hashlib.md5(upload.getvalue()).hexdigest() if upload is not None el
 
 if predict and upload is not None:
     try:
-        bgr = decode_image(upload.getvalue())
+        img = predictor.load_photo(upload.getvalue())
     except ValueError as err:
         st.error(str(err))
         st.stop()
     with st.spinner("Analysing the photo and patient details ..."):
-        img = predictor.preprocess_image(bgr)
         meta = predictor.encode_clinical(age, region, answers)
         probs, cam, idx = predictor.explain(img, meta)
         effects = predictor.symptom_effects(img, age, region, answers, idx)
@@ -140,7 +139,7 @@ with c_probs:
         st.progress(float(probs[k]), text=f"{names[k]} - {full[names[k]]}: {probs[k]:.1%}")
 
 with c_photo:
-    st.image(res["img"], caption="Photo as the model sees it (colour-normalised, 224×224)", width="stretch")
+    st.image(res["img"], caption=f"Photo as the model sees it ({predictor.photo_note})", width="stretch")
 
 with c_cam:
     heatmap_slot = st.empty()

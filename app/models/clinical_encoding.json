@@ -1,0 +1,133 @@
+{
+  "source": "clinical_preprocessor.joblib (scikit-learn 1.6.1)",
+  "columns": [
+    "age",
+    "itch",
+    "grew",
+    "hurt",
+    "changed",
+    "bleed",
+    "elevation",
+    "region"
+  ],
+  "age_mean": 60.150110375275936,
+  "age_scale": 15.782260546710999,
+  "features": [
+    {
+      "column": "age",
+      "value": null
+    },
+    {
+      "column": "itch",
+      "value": "FALSE"
+    },
+    {
+      "column": "itch",
+      "value": "TRUE"
+    },
+    {
+      "column": "grew",
+      "value": "FALSE"
+    },
+    {
+      "column": "grew",
+      "value": "TRUE"
+    },
+    {
+      "column": "grew",
+      "value": "UNK"
+    },
+    {
+      "column": "hurt",
+      "value": "FALSE"
+    },
+    {
+      "column": "hurt",
+      "value": "TRUE"
+    },
+    {
+      "column": "changed",
+      "value": "FALSE"
+    },
+    {
+      "column": "changed",
+      "value": "TRUE"
+    },
+    {
+      "column": "changed",
+      "value": "UNK"
+    },
+    {
+      "column": "bleed",
+      "value": "FALSE"
+    },
+    {
+      "column": "bleed",
+      "value": "TRUE"
+    },
+    {
+      "column": "elevation",
+      "value": "FALSE"
+    },
+    {
+      "column": "elevation",
+      "value": "TRUE"
+    },
+    {
+      "column": "region",
+      "value": "ABDOMEN"
+    },
+    {
+      "column": "region",
+      "value": "ARM"
+    },
+    {
+      "column": "region",
+      "value": "BACK"
+    },
+    {
+      "column": "region",
+      "value": "CHEST"
+    },
+    {
+      "column": "region",
+      "value": "EAR"
+    },
+    {
+      "column": "region",
+      "value": "FACE"
+    },
+    {
+      "column": "region",
+      "value": "FOOT"
+    },
+    {
+      "column": "region",
+      "value": "FOREARM"
+    },
+    {
+      "column": "region",
+      "value": "HAND"
+    },
+    {
+      "column": "region",
+      "value": "LIP"
+    },
+    {
+      "column": "region",
+      "value": "NECK"
+    },
+    {
+      "column": "region",
+      "value": "NOSE"
+    },
+    {
+      "column": "region",
+      "value": "SCALP"
+    },
+    {
+      "column": "region",
+      "value": "THIGH"
+    }
+  ]
+}
