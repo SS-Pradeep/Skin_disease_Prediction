@@ -1,0 +1,35 @@
+# DermaScan dark "clinical clean" theme. Streamlit reads this file automatically for `streamlit run app/app.py`.
+# The page styling that themes cannot express (cards, stepper, result ring, ...) is in app/ui.py.
+
+[server]
+enableStaticServing = true          # serves app/static/ (the bundled font, so the look is the same offline)
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+base = "dark"
+primaryColor = "#14B8A6"
+backgroundColor = "#0A1014"
+secondaryBackgroundColor = "#142027"
+textColor = "#E6EEF2"
+borderColor = "#22323B"
+showWidgetBorder = true
+baseRadius = "10px"
+buttonRadius = "10px"
+font = "Plus Jakarta Sans"
+headingFont = "Plus Jakarta Sans"
+baseFontSize = 15
+redColor = "#F87171"
+orangeColor = "#FBBF24"
+greenColor = "#34D399"
+blueColor = "#38BDF8"
+
+[[theme.fontFaces]]
+family = "Plus Jakarta Sans"
+url = "app/static/fonts/PlusJakartaSans-latin-wght.woff2"
+weight = "200 800"
+style = "normal"
