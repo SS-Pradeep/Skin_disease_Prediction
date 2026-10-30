@@ -1,0 +1,89 @@
+{
+  "source": "PAD-UFES-20 test split of Skin_Disease_Multimodal_Fusion.ipynb (StratifiedGroupKFold, 5 folds, seed 42, fold 0 = test; patients never seen in training)",
+  "examples": [
+    {
+      "file": "PAT_69_1053_540.png",
+      "diagnosis": "ACK",
+      "age": 66,
+      "region": "ARM",
+      "answers": {
+        "itch": "TRUE",
+        "grew": "FALSE",
+        "hurt": "TRUE",
+        "changed": "FALSE",
+        "bleed": "FALSE",
+        "elevation": "TRUE"
+      }
+    },
+    {
+      "file": "PAT_718_1358_919.png",
+      "diagnosis": "BCC",
+      "age": 61,
+      "region": "FACE",
+      "answers": {
+        "itch": "TRUE",
+        "grew": "UNK",
+        "hurt": "TRUE",
+        "changed": "UNK",
+        "bleed": "TRUE",
+        "elevation": "TRUE"
+      }
+    },
+    {
+      "file": "PAT_746_1407_708.png",
+      "diagnosis": "MEL",
+      "age": 71,
+      "region": "BACK",
+      "answers": {
+        "itch": "TRUE",
+        "grew": "TRUE",
+        "hurt": "FALSE",
+        "changed": "TRUE",
+        "bleed": "FALSE",
+        "elevation": "TRUE"
+      }
+    },
+    {
+      "file": "PAT_1138_520_154.png",
+      "diagnosis": "NEV",
+      "age": 35,
+      "region": "EAR",
+      "answers": {
+        "itch": "FALSE",
+        "grew": "FALSE",
+        "hurt": "FALSE",
+        "changed": "FALSE",
+        "bleed": "FALSE",
+        "elevation": "FALSE"
+      }
+    },
+    {
+      "file": "PAT_963_1817_593.png",
+      "diagnosis": "SCC",
+      "age": 58,
+      "region": "BACK",
+      "answers": {
+        "itch": "TRUE",
+        "grew": "UNK",
+        "hurt": "FALSE",
+        "changed": "UNK",
+        "bleed": "FALSE",
+        "elevation": "FALSE"
+      }
+    },
+    {
+      "file": "PAT_1730_3236_201.png",
+      "diagnosis": "SEK",
+      "age": 73,
+      "region": "ARM",
+      "answers": {
+        "itch": "FALSE",
+        "grew": "TRUE",
+        "hurt": "FALSE",
+        "changed": "FALSE",
+        "bleed": "FALSE",
+        "elevation": "TRUE"
+      }
+    }
+  ]
+}

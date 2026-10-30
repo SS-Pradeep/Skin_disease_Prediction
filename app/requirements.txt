@@ -1,6 +1,8 @@
-streamlit>=1.50
-tensorflow>=2.16
-opencv-python-headless>=4.8
-pillow
-numpy
-pandas
+# Exact versions the app and model were tested with (Python 3.10-3.13; TensorFlow 2.21 has no build for 3.14).
+streamlit==1.66.1          # the page styling targets this version's layout
+tensorflow==2.21.0
+keras==3.15.1
+numpy==2.5.4
+opencv-python-headless==5.0.0.93
+pillow==13.0.0
+fpdf2==2.8.9
