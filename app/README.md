@@ -31,7 +31,9 @@ Everything (font included) is stored in the repository, so the demo works withou
 1. Push the repository to GitHub, including `app/models/fusion_model.keras` and `app/models/config.json`.
 2. Sign in at share.streamlit.io with GitHub, choose **Create app** → **Yup, I have an app**, and fill in the
    repository, the branch and the main file path `app/app.py`. Pick an app URL if you like.
-3. Under **Advanced settings**, keep Python **3.12** (the default). No secrets are needed.
+3. Under **Advanced settings**, set Python to **3.12** and click **Save**. Community Cloud may pre-select a newer
+   version such as 3.14, which TensorFlow 2.21 does not support, and the version cannot be changed after deploying
+   (delete the app and deploy it again). No secrets are needed.
 4. Click **Save**. The first build takes several minutes because TensorFlow is large.
 
 Community Cloud reads `app/requirements.txt` and `app/.streamlit/config.toml` because they sit next to `app.py`,
